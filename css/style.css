@@ -30,14 +30,17 @@
 .tombol {
     text-transform: uppercase;
     font-size: 20px;
+    border-radius: 20px;
 }
 
 /* jumbotron */
 .jumbotron {
     background-image: url(../img/bg.jpg);
-    background-size: cover;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
     position: relative;
-    height: 600px;
+    width: auto;
+    height: auto;
 }
 
 .jumbotron .container {
@@ -69,7 +72,7 @@
 
 /* info panel */
 .info-panel {
-    margin-top: -140px;
+    margin-top: 50px;
     z-index: 9999;
     position: relative;
     font-weight: 500;
@@ -97,9 +100,9 @@
 }
 
 .workingspace img {
-    height: 300px;
-    width: 300px;
-    padding-top: -100px;
+    display: none;
+    text-align: center;
+
 }
 
 /* course */
@@ -108,10 +111,15 @@
     text-align: center;
 }
 
-.course img {
-    height: 200px;
-    width: 400px;
+.course img.img-fluid {
+    height: 175px;
+    width: 250px;
+}
+
+.course img.card-img-bottom {
     border-radius: 50%;
+    width: 50px;
+    height: 50px;
 }
 
 .course h5 {
@@ -121,15 +129,11 @@
     font-weight: 500;
 }
 
-.course p {
+.course p.card-text {
     font-size: 16px;
-    font-weight: 500;
-}
+    font-weight: 200;
+    text-align: justify;
 
-.course h6.img-fluid {
-    font-size: 18px;
-    font-weight: 500;
-    font-style: bold;
 }
 
 /* testimonial */
@@ -144,11 +148,49 @@
     height: 100px;
 }
 
+.testimonial div a {
+    margin-bottom: 30px;
+}
+
 .testimonial .card-img-bottom {
     border-radius: 50%;
     width: 50px;
     height: 50px;
 }
+
+/* footer */
+footer {
+    padding-top: 50px;
+}
+
+footer p,
+span {
+    font-weight: 200;
+}
+
+/* page-section-contact*/
+.page-section-contact {
+    padding-top: 50px;
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, .5);
+
+}
+
+.page-section-contact h1 {
+    font-size: 36px;
+    padding-top: 10px;
+    font-weight: 500;
+}
+
+.page-section-contact p {
+    font-size: 16px;
+    font-weight: 200;
+
+}
+
+.page-section-contact input {
+    margin-bottom: 15px;
+}
+
 
 /* footer */
 .footer {
@@ -157,3 +199,30 @@
 }
 
 /* end footer */
+/* DESKTOP VERSION */
+@media (min-width: 555px) {
+
+    /* jumbotron */
+    .jumbotron {
+        background-image: url(../img/bg.jpg);
+        background-size: cover;
+        position: relative;
+        height: 600px;
+    }
+
+    /* info panel */
+    .info-panel {
+        margin-top: -140px;
+        z-index: 9999;
+        position: relative;
+        font-weight: 500;
+        text-shadow: 1px 0 0 white;
+    }
+
+    /* workingspace */
+    .workingspace img {
+        height: 348px;
+        width: 348px;
+        display: inline-block;
+    }
+}
